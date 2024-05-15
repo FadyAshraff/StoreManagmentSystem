@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00A0FFE9-D8FF-4F14-B072-1595E3601C47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StoreManagmentSystem</RootNamespace>
+    <AssemblyName>StoreManagmentSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssistanatClasses\Assistant.cs" />
+    <Compile Include="Forms\Invoices\SalesInvoices\AddSalesInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoices\SalesInvoices\AddSalesInvoice.Designer.cs">
+      <DependentUpon>AddSalesInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoices\SalesInvoices\EditSalesInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoices\SalesInvoices\EditSalesInvoice.Designer.cs">
+      <DependentUpon>EditSalesInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoices\SupplyInvoices\AddSupplyInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoices\SupplyInvoices\AddSupplyInvoice.Designer.cs">
+      <DependentUpon>AddSupplyInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoices\SupplyInvoices\EditSupplyInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoices\SupplyInvoices\EditSupplyInvoice.Designer.cs">
+      <DependentUpon>EditSupplyInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Items\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Items\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Items\DeleteItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Items\DeleteItem.Designer.cs">
+      <DependentUpon>DeleteItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Items\EditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Items\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measures\AddMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measures\AddMeasure.Designer.cs">
+      <DependentUpon>AddMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measures\DeleteMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measures\DeleteMeasure.Designer.cs">
+      <DependentUpon>DeleteMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measures\EditMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measures\EditMeasure.Designer.cs">
+      <DependentUpon>EditMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Customers\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Customers\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Customers\DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Customers\DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Customers\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Customers\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Vendors\AddVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Vendors\AddVendor.Designer.cs">
+      <DependentUpon>AddVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Vendors\DeleteVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Vendors\DeleteVendor.Designer.cs">
+      <DependentUpon>DeleteVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Vendors\EditVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stackholders\Vendors\EditVendor.Designer.cs">
+      <DependentUpon>EditVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stores\AddStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stores\AddStore.Designer.cs">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stores\DeleteStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stores\DeleteStore.Designer.cs">
+      <DependentUpon>DeleteStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stores\EditStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stores\EditStore.Designer.cs">
+      <DependentUpon>EditStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\SalesInvoiceDb.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Measure.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Sales_Invoice.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\StoreManagmentContext.cs" />
+    <Compile Include="Models\Store_Item.cs" />
+    <Compile Include="Models\Store_Item_Quantity.cs" />
+    <Compile Include="Models\Supply_Invoice.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Methods\CustomerDb.cs" />
+    <Compile Include="Methods\ItemDb.cs" />
+    <Compile Include="Methods\MeasureDb.cs" />
+    <Compile Include="Methods\StoreDb.cs" />
+    <Compile Include="Methods\StoreItemDb.cs" />
+    <Compile Include="Methods\StoreItemQuantityDb.cs" />
+    <Compile Include="Methods\SupplyInvoiceDb.cs" />
+    <Compile Include="Methods\VendorDb.cs" />
+    <Compile Include="ViewModels\AllItemsCb.cs" />
+    <Compile Include="ViewModels\AllMeasuresCb.cs" />
+    <Compile Include="ViewModels\SalesInvoiceViewModels\FullSalesInvoice.cs" />
+    <Compile Include="ViewModels\SupplyInvoiceViewModels\FullSupplyInvoice.cs" />
+    <Compile Include="ViewModels\SalesInvoiceViewModels\SalesInvoiceDataGridViewModel.cs" />
+    <Compile Include="ViewModels\SalesInvoiceViewModels\SalesInvoiceViewModel.cs" />
+    <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceDataGridViewModel.cs" />
+    <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceViewModel.cs" />
+    <EmbeddedResource Include="Form1.ar-EG.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SalesInvoices\AddSalesInvoice.ar-EG.resx">
+      <DependentUpon>AddSalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SalesInvoices\AddSalesInvoice.resx">
+      <DependentUpon>AddSalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SalesInvoices\EditSalesInvoice.ar-EG.resx">
+      <DependentUpon>EditSalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SalesInvoices\EditSalesInvoice.resx">
+      <DependentUpon>EditSalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SupplyInvoices\AddSupplyInvoice.ar-EG.resx">
+      <DependentUpon>AddSupplyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SupplyInvoices\AddSupplyInvoice.resx">
+      <DependentUpon>AddSupplyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SupplyInvoices\EditSupplyInvoice.ar-EG.resx">
+      <DependentUpon>EditSupplyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices\SupplyInvoices\EditSupplyInvoice.resx">
+      <DependentUpon>EditSupplyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items\AddItem.ar-EG.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items\DeleteItem.ar-EG.resx">
+      <DependentUpon>DeleteItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items\DeleteItem.resx">
+      <DependentUpon>DeleteItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items\EditItem.ar-EG.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measures\AddMeasure.ar-EG.resx">
+      <DependentUpon>AddMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measures\AddMeasure.resx">
+      <DependentUpon>AddMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measures\DeleteMeasure.ar-EG.resx">
+      <DependentUpon>DeleteMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measures\DeleteMeasure.resx">
+      <DependentUpon>DeleteMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measures\EditMeasure.ar-EG.resx">
+      <DependentUpon>EditMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measures\EditMeasure.resx">
+      <DependentUpon>EditMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Customers\AddCustomer.ar-EG.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Customers\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Customers\DeleteCustomer.ar-EG.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Customers\DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Customers\EditCustomer.ar-EG.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Customers\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Vendors\AddVendor.ar-EG.resx">
+      <DependentUpon>AddVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Vendors\AddVendor.resx">
+      <DependentUpon>AddVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Vendors\DeleteVendor.ar-EG.resx">
+      <DependentUpon>DeleteVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Vendors\DeleteVendor.resx">
+      <DependentUpon>DeleteVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Vendors\EditVendor.ar-EG.resx">
+      <DependentUpon>EditVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stackholders\Vendors\EditVendor.resx">
+      <DependentUpon>EditVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\AddStore.ar-EG.resx">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\AddStore.resx">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\DeleteStore.ar-EG.resx">
+      <DependentUpon>DeleteStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\DeleteStore.resx">
+      <DependentUpon>DeleteStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\EditStore.ar-EG.resx">
+      <DependentUpon>EditStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\EditStore.resx">
+      <DependentUpon>EditStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory-3550551_1920.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
